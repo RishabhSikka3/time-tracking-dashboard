@@ -5,10 +5,10 @@
   $cellWidth: functions.rem(300px),
   $gap: 0,
   $rows: null,
-  $justifyContent: "start",
-  $alignItems: "center",
-  $justifyItems: "center",
-  $alignContent: "start"
+  $justifyContent: start,
+  $alignItems: stretch,
+  $justifyItems: stretch,
+  $alignContent: stretch
 ) {
   display: grid;
   @if (type-of($columns) == "string") {

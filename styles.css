@@ -37,10 +37,10 @@ html {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16.6666666667rem, 1fr));
   grid-gap: 1.3333333333rem;
-  justify-content: "start";
-  justify-items: "center";
-  align-items: "center";
-  align-content: "start";
+  justify-content: start;
+  justify-items: stretch;
+  align-items: stretch;
+  align-content: stretch;
 }
 
 .card {
@@ -121,10 +121,10 @@ button[aria-selected=true] {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16.6666666667rem, 1fr));
   grid-gap: 1.3333333333rem;
-  justify-content: "start";
-  justify-items: "center";
-  align-items: "center";
-  align-content: "start";
+  justify-content: start;
+  justify-items: stretch;
+  align-items: stretch;
+  align-content: stretch;
 }
 
 .tab-panel[role=tabpanel].hidden {
