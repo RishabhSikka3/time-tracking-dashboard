@@ -166,6 +166,17 @@ button[aria-selected="true"] {
   color: variables.$navy-200;
 }
 
+.attribution {
+  font-size: functions.rem(14px);
+  font-weight: variables.$font-weight-light;
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: variables.$purple-500;
+}
+
 /* Media Queries */
 
 @media (min-width: functions.rem(768px)) {

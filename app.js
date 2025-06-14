@@ -8,7 +8,7 @@ const dailyPanelCards = dailyPanel.querySelectorAll(".card");
 const weeklyPanelCards = weeklyPanel.querySelectorAll(".card");
 const monthlyPanelCards = monthlyPanel.querySelectorAll(".card");
 
-fetch("/data.json")
+fetch("data.json")
   .then((res) => {
     return res.json();
   })
