@@ -1,0 +1,44 @@
+@use "functions";
+
+@mixin grid(
+  $columns: 1,
+  $cellWidth: functions.rem(300px),
+  $gap: 0,
+  $rows: null,
+  $justifyContent: "start",
+  $alignItems: "center",
+  $justifyItems: "center",
+  $alignContent: "start"
+) {
+  display: grid;
+  @if (type-of($columns) == "string") {
+    grid-template-columns: repeat($columns, minmax($cellWidth, 1fr));
+  } @else {
+    grid-template-columns: repeat($columns, minmax($cellWidth, 1fr));
+  }
+  @if ($rows == null) {
+    grid-template-rows: $rows;
+  }
+  grid-gap: $gap;
+  justify-content: $justifyContent;
+  justify-items: $justifyItems;
+  align-items: $alignItems;
+  align-content: $alignContent;
+}
+
+@mixin flex(
+  $direction: row,
+  $wrap: nowrap,
+  $justifyContent: flex-start,
+  $alignItems: stretch,
+  $gap: 0,
+  $alignContent: normal
+) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  align-content: $alignContent;
+  gap: $gap;
+}

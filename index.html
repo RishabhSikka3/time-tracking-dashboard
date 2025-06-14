@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="app.js" defer></script>
+
+    <title>Time tracking dashboard</title>
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="tabs">
+        <div class="card profile-tabs">
+          <div class="profile">
+            <img
+              src="images/image-jeremy.png"
+              alt="Jeremy Robson"
+              class="avatar"
+            />
+            <div class="info">
+              <span class="tag">Report for</span
+              ><span class="name">Jeremy Robson</span>
+            </div>
+          </div>
+          <div role="tablist" aria-label="Time Tracker Tabs">
+            <button
+              role="tab"
+              aria-selected="false"
+              aria-controls="daily-panel"
+              id="daily-tab"
+              tabindex="-1"
+            >
+              Daily</button
+            ><button
+              role="tab"
+              aria-selected="true"
+              aria-controls="weekly-panel"
+              id="weekly-tab"
+              tabindex="-1"
+            >
+              Weekly</button
+            ><button
+              role="tab"
+              aria-selected="false"
+              aria-controls="monthly-panel"
+              id="monthly-tab"
+              tabindex="-1"
+            >
+              Monthly
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="tab-panel hidden"
+          id="daily-panel"
+          role="tabpanel"
+          aria-labelledby="daily-tab"
+        >
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Work</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Play</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Study</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Exercise</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Social</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Self Care</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div
+          class="tab-panel"
+          id="weekly-panel"
+          role="tabpanel"
+          aria-labelledby="weekly-tab"
+        >
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Work</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Play</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Study</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Exercise</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Social</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Self Care</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div
+          class="tab-panel hidden"
+          id="monthly-panel"
+          role="tabpanel"
+          aria-labelledby="monthly-tab"
+        >
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Work</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Play</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Study</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Exercise</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Social</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+          <section class="card">
+            <div class="fill"></div>
+            <div class="card-content">
+              <div class="title">
+                <h2 class="heading-text">Self Care</h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="Descriptive Menu Icon"
+                  class="menu-icon"
+                />
+              </div>
+              <div class="info">
+                <p class="time-spent"></p>
+                <p class="previous-stat"></p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>

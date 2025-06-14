@@ -1,0 +1,242 @@
+@use "partials/variables";
+@use "partials/base";
+@use "partials/functions";
+@use "partials/mixins";
+
+.container {
+  @include mixins.flex(column, wrap, center, center);
+  min-height: 100vh;
+  padding: functions.rem(64px) functions.rem(24px);
+}
+
+.tabs {
+  @include mixins.grid(
+    auto-fit,
+    functions.rem(300px),
+    functions.rem(24px),
+    null
+  );
+}
+
+.card {
+  background-color: variables.$navy-900;
+  border-radius: functions.rem(15px);
+  padding-bottom: functions.rem(24px);
+}
+
+.profile-tabs .profile {
+  background-color: variables.$purple-600;
+  border-radius: inherit;
+  padding: functions.rem(32px);
+  @include mixins.flex(row, wrap, flex-start, flex-start, functions.rem(24px));
+  margin-bottom: functions.rem(24px);
+}
+
+.profile .avatar {
+  height: functions.rem(64px);
+  width: functions.rem(64px);
+  border-radius: 50%;
+  outline: functions.rem(3px) solid variables.$white;
+  object-fit: contain;
+}
+
+.profile .info {
+  @include mixins.flex(column, wrap, center, flex-start, functions.rem(8px));
+}
+
+.info .tag {
+  font-size: functions.rem(15px);
+  line-height: functions.rem(18px);
+  color: variables.$navy-200;
+}
+
+.info .name {
+  font-weight: variables.$font-weight-light;
+}
+
+.profile-tabs [role="tablist"] {
+  @include mixins.flex(row, wrap, space-around, center);
+}
+
+button[role="tab"] {
+  background-color: inherit;
+  padding: 0;
+  border: none;
+  color: variables.$purple-500;
+}
+
+button[role="tab"]:hover {
+  cursor: pointer;
+}
+
+button[aria-selected="true"] {
+  color: variables.$white;
+}
+
+.tab-panel[role="tabpanel"] {
+  @include mixins.grid(
+    auto-fit,
+    functions.rem(300px),
+    functions.rem(24px),
+    null
+  );
+}
+
+.tab-panel[role="tabpanel"].hidden {
+  display: none;
+}
+
+.tab-panel .card {
+  padding: 0;
+}
+
+#card-fill {
+  padding: functions.rem(20px);
+  border-radius: functions.rem(15px) functions.rem(15px) 0 0;
+  background-repeat: no-repeat;
+  background-position: top functions.rem(-9px) right functions.rem(15px);
+}
+
+.tab-panel .card:nth-child(1) .fill {
+  @extend #card-fill;
+  background-color: variables.$orange-300;
+  background-image: url("images/icon-work.svg");
+}
+
+.tab-panel .card:nth-child(2) .fill {
+  @extend #card-fill;
+  background-color: variables.$blue-300;
+  background-image: url("images/icon-play.svg");
+}
+
+.tab-panel .card:nth-child(3) .fill {
+  @extend #card-fill;
+  background-color: variables.$pink-400;
+  background-image: url("images/icon-study.svg");
+}
+
+.tab-panel .card:nth-child(4) .fill {
+  @extend #card-fill;
+  background-color: variables.$green-400;
+  background-image: url("images/icon-exercise.svg");
+}
+
+.tab-panel .card:nth-child(5) .fill {
+  @extend #card-fill;
+  background-color: variables.$purple-700;
+  background-image: url("images/icon-social.svg");
+}
+
+.tab-panel .card:nth-child(6) .fill {
+  @extend #card-fill;
+  background-color: variables.$yellow-300;
+  background-image: url("images/icon-self-care.svg");
+}
+
+.tab-panel .card-content {
+  padding: functions.rem(24px);
+  border-radius: functions.rem(15px);
+}
+
+.card-content .title {
+  @include mixins.flex(row, wrap, space-between, center);
+  margin-bottom: functions.rem(8px);
+}
+
+.card-content .title .heading-text {
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-weight: variables.$font-weight-medium;
+}
+
+.card-content .info {
+  @include mixins.flex(row, wrap, space-between, center);
+}
+
+.card-content .info .time-spent {
+  font-size: functions.rem(32px);
+  line-height: functions.rem(38px);
+  font-weight: variables.$font-weight-light;
+}
+
+.card-content .info .previous-stat {
+  font-size: functions.rem(15px);
+  line-height: functions.rem(18px);
+  color: variables.$navy-200;
+}
+
+/* Media Queries */
+
+@media (min-width: functions.rem(768px)) {
+  .tabs {
+    grid-template-columns: repeat(1, functions.rem(612px));
+    grid-template-rows: auto auto;
+  }
+
+  .profile-tabs [role="tablist"] {
+    width: 60%;
+    margin: auto;
+  }
+
+  .tab-panel[role="tabpanel"] {
+    grid-template-columns: repeat(3, functions.rem(188px));
+  }
+
+  .card-content .title {
+    margin-bottom: functions.rem(16px);
+  }
+
+  .card-content .info {
+    flex-direction: column;
+    gap: functions.rem(8px);
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: functions.rem(1200px)) {
+  .tabs {
+    grid-template-columns: functions.rem(220px) 1fr;
+    grid-gap: functions.rem(32px);
+  }
+
+  .profile-tabs .profile {
+    height: 70%;
+    flex-direction: column;
+    gap: functions.rem(40px);
+    margin: 0rem;
+  }
+
+  .profile .info {
+    gap: 0rem;
+    width: 60%;
+  }
+
+  .info .name {
+    font-size: functions.rem(40px);
+    line-height: functions.rem(47px);
+  }
+
+  .profile-tabs [role="tablist"] {
+    width: 100%;
+    padding: functions.rem(32px);
+    margin-right: auto;
+    flex-direction: column;
+    gap: functions.rem(21px);
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .tab-panel[role="tabpanel"] {
+    grid-template-columns: repeat(3, functions.rem(220px));
+  }
+
+  .tab-panel .card-content {
+    padding: functions.rem(32px);
+  }
+
+  .card-content .title {
+    margin-bottom: functions.rem(24px);
+  }
+}

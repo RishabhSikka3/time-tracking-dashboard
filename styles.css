@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+/* Variables Start */
+/* Variables End */
+/* Resets Start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Resets End */
+/* Body Start */
+html {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: hsl(226, 43%, 10%);
+  color: #ffffff;
+  line-height: 1.1666666667rem;
+  letter-spacing: 0px;
+}
+
+/* Body End */
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: normal;
+  gap: 0;
+  min-height: 100vh;
+  padding: 3.5555555556rem 1.3333333333rem;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16.6666666667rem, 1fr));
+  grid-gap: 1.3333333333rem;
+  justify-content: "start";
+  justify-items: "center";
+  align-items: "center";
+  align-content: "start";
+}
+
+.card {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 0.8333333333rem;
+  padding-bottom: 1.3333333333rem;
+}
+
+.profile-tabs .profile {
+  background-color: hsl(246, 80%, 60%);
+  border-radius: inherit;
+  padding: 1.7777777778rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: normal;
+  gap: 1.3333333333rem;
+  margin-bottom: 1.3333333333rem;
+}
+
+.profile .avatar {
+  height: 3.5555555556rem;
+  width: 3.5555555556rem;
+  border-radius: 50%;
+  outline: 0.1666666667rem solid #ffffff;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.profile .info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: normal;
+  gap: 0.4444444444rem;
+}
+
+.info .tag {
+  font-size: 0.8333333333rem;
+  line-height: 1rem;
+  color: hsl(236, 100%, 87%);
+}
+
+.info .name {
+  font-weight: 300;
+}
+
+.profile-tabs [role=tablist] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: normal;
+  gap: 0;
+}
+
+button[role=tab] {
+  background-color: inherit;
+  padding: 0;
+  border: none;
+  color: hsl(235, 45%, 61%);
+}
+
+button[role=tab]:hover {
+  cursor: pointer;
+}
+
+button[aria-selected=true] {
+  color: #ffffff;
+}
+
+.tab-panel[role=tabpanel] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16.6666666667rem, 1fr));
+  grid-gap: 1.3333333333rem;
+  justify-content: "start";
+  justify-items: "center";
+  align-items: "center";
+  align-content: "start";
+}
+
+.tab-panel[role=tabpanel].hidden {
+  display: none;
+}
+
+.tab-panel .card {
+  padding: 0;
+}
+
+#card-fill, .tab-panel .card:nth-child(6) .fill, .tab-panel .card:nth-child(5) .fill, .tab-panel .card:nth-child(4) .fill, .tab-panel .card:nth-child(3) .fill, .tab-panel .card:nth-child(2) .fill, .tab-panel .card:nth-child(1) .fill {
+  padding: 1.1111111111rem;
+  border-radius: 0.8333333333rem 0.8333333333rem 0 0;
+  background-repeat: no-repeat;
+  background-position: top -0.5rem right 0.8333333333rem;
+}
+
+.tab-panel .card:nth-child(1) .fill {
+  background-color: hsl(15, 100%, 70%);
+  background-image: url("images/icon-work.svg");
+}
+
+.tab-panel .card:nth-child(2) .fill {
+  background-color: hsl(195, 74%, 62%);
+  background-image: url("images/icon-play.svg");
+}
+
+.tab-panel .card:nth-child(3) .fill {
+  background-color: hsl(348, 100%, 68%);
+  background-image: url("images/icon-study.svg");
+}
+
+.tab-panel .card:nth-child(4) .fill {
+  background-color: hsl(145, 58%, 55%);
+  background-image: url("images/icon-exercise.svg");
+}
+
+.tab-panel .card:nth-child(5) .fill {
+  background-color: hsl(264, 64%, 52%);
+  background-image: url("images/icon-social.svg");
+}
+
+.tab-panel .card:nth-child(6) .fill {
+  background-color: hsl(43, 84%, 65%);
+  background-image: url("images/icon-self-care.svg");
+}
+
+.tab-panel .card-content {
+  padding: 1.3333333333rem;
+  border-radius: 0.8333333333rem;
+}
+
+.card-content .title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: normal;
+  gap: 0;
+  margin-bottom: 0.4444444444rem;
+}
+
+.card-content .title .heading-text {
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-weight: 500;
+}
+
+.card-content .info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: normal;
+  gap: 0;
+}
+
+.card-content .info .time-spent {
+  font-size: 1.7777777778rem;
+  line-height: 2.1111111111rem;
+  font-weight: 300;
+}
+
+.card-content .info .previous-stat {
+  font-size: 0.8333333333rem;
+  line-height: 1rem;
+  color: hsl(236, 100%, 87%);
+}
+
+/* Media Queries */
+@media (min-width: 42.6666666667rem) {
+  .tabs {
+    grid-template-columns: repeat(1, 34rem);
+    grid-template-rows: auto auto;
+  }
+  .profile-tabs [role=tablist] {
+    width: 60%;
+    margin: auto;
+  }
+  .tab-panel[role=tabpanel] {
+    grid-template-columns: repeat(3, 10.4444444444rem);
+  }
+  .card-content .title {
+    margin-bottom: 0.8888888889rem;
+  }
+  .card-content .info {
+    flex-direction: column;
+    gap: 0.4444444444rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 66.6666666667rem) {
+  .tabs {
+    grid-template-columns: 12.2222222222rem 1fr;
+    grid-gap: 1.7777777778rem;
+  }
+  .profile-tabs .profile {
+    height: 70%;
+    flex-direction: column;
+    gap: 2.2222222222rem;
+    margin: 0rem;
+  }
+  .profile .info {
+    gap: 0rem;
+    width: 60%;
+  }
+  .info .name {
+    font-size: 2.2222222222rem;
+    line-height: 2.6111111111rem;
+  }
+  .profile-tabs [role=tablist] {
+    width: 100%;
+    padding: 1.7777777778rem;
+    margin-right: auto;
+    flex-direction: column;
+    gap: 1.1666666667rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .tab-panel[role=tabpanel] {
+    grid-template-columns: repeat(3, 12.2222222222rem);
+  }
+  .tab-panel .card-content {
+    padding: 1.7777777778rem;
+  }
+  .card-content .title {
+    margin-bottom: 1.3333333333rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
