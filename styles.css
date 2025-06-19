@@ -135,7 +135,7 @@ button[aria-selected=true] {
   padding: 0;
 }
 
-#card-fill, .tab-panel .card:nth-child(6) .fill, .tab-panel .card:nth-child(5) .fill, .tab-panel .card:nth-child(4) .fill, .tab-panel .card:nth-child(3) .fill, .tab-panel .card:nth-child(2) .fill, .tab-panel .card:nth-child(1) .fill {
+.tab-panel .card:nth-child(6) .fill, .tab-panel .card:nth-child(5) .fill, .tab-panel .card:nth-child(4) .fill, .tab-panel .card:nth-child(3) .fill, .tab-panel .card:nth-child(2) .fill, .tab-panel .card:nth-child(1) .fill {
   padding: 1.1111111111rem;
   border-radius: 0.8333333333rem 0.8333333333rem 0 0;
   background-repeat: no-repeat;

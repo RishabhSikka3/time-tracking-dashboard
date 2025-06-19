@@ -90,7 +90,7 @@ button[aria-selected="true"] {
   padding: 0;
 }
 
-#card-fill {
+%card-fill {
   padding: functions.rem(20px);
   border-radius: functions.rem(15px) functions.rem(15px) 0 0;
   background-repeat: no-repeat;
@@ -98,37 +98,37 @@ button[aria-selected="true"] {
 }
 
 .tab-panel .card:nth-child(1) .fill {
-  @extend #card-fill;
+  @extend %card-fill;
   background-color: variables.$orange-300;
   background-image: url("images/icon-work.svg");
 }
 
 .tab-panel .card:nth-child(2) .fill {
-  @extend #card-fill;
+  @extend %card-fill;
   background-color: variables.$blue-300;
   background-image: url("images/icon-play.svg");
 }
 
 .tab-panel .card:nth-child(3) .fill {
-  @extend #card-fill;
+  @extend %card-fill;
   background-color: variables.$pink-400;
   background-image: url("images/icon-study.svg");
 }
 
 .tab-panel .card:nth-child(4) .fill {
-  @extend #card-fill;
+  @extend %card-fill;
   background-color: variables.$green-400;
   background-image: url("images/icon-exercise.svg");
 }
 
 .tab-panel .card:nth-child(5) .fill {
-  @extend #card-fill;
+  @extend %card-fill;
   background-color: variables.$purple-700;
   background-image: url("images/icon-social.svg");
 }
 
 .tab-panel .card:nth-child(6) .fill {
-  @extend #card-fill;
+  @extend %card-fill;
   background-color: variables.$yellow-300;
   background-image: url("images/icon-self-care.svg");
 }
